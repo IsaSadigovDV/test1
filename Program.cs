@@ -80,21 +80,117 @@ using Linq;
 
 
 // her ededdin countunu tapmaliyiq
-List<int> numbers2 = new() { 23, 4, 8, 4,  23, 11, 6, 57, 4, 18, 8 };
-Dictionary<int, int> newList = new Dictionary<int, int>() { };
+//List<int> numbers2 = new() { 23, 4, 8, 4,  23, 11, 6, 57, 4, 18, 8 };
+//Dictionary<int, int> newList = new Dictionary<int, int>() { };
 
 
-for (int i = 0; i < numbers2.Count; i++)
+//for (int i = 0; i < numbers2.Count; i++)
+//{
+//    if (newList.ContainsKey(numbers2[i]))
+//    {
+//        newList[numbers2[i]]++;
+//    }
+//    else
+//    {
+//        newList[numbers2[i]] = 1;
+//    }
+//}
+
+
+//Console.WriteLine();
+
+// select num, count(num) from numbers group by num
+//var counts = numbers2
+//            .GroupBy(num => num)
+//            .Select(x => new
+//            {
+//                reqem = x,
+//                sayi = x.Count()
+//            })
+//            .ToList();
+
+//var res =  numbers2.ToList();
+
+//IEnumerable<Student> students;
+//IQueryable<Student> students2;
+
+List<Student> students = new()
 {
-    if (newList.ContainsKey(numbers2[i]))
+    new  ()
     {
-        newList[numbers2[i]]++;
-    }
-    else
+       Id = 1,
+       Name = "A",
+       Grade = 99.9
+    },
+     new ()
     {
-        newList[numbers2[i]] = 1;
+       Id = 2,
+       Name = "B",
+       Grade = 77.9
+    },
+      new ()
+    {
+       Id = 3,
+       Name = "C",
+       Grade = 66.9
     }
-}
+};
+//List<Student> newList = new() { };
+
+List<int> numbers2 = new() { 23, 4, 8, 4, 23, 11, 6, 57, 4, 18, 8 };
+//Select
+//var res =  students.Select(x=> new 
+//{
+//    x.Id,
+//    x.Name,
+//}).ToList();
 
 
-Console.WriteLine();
+//foreach (var student in res)
+//{
+//    Console.WriteLine($"Id : {student.Id} : Name {student.Name}");
+//}
+
+//students.Where(x=>x.Name == "A").ToList();
+//students.OrderBy(x => x.Id).ToList();
+//students.OrderByDescending(x => x.Name).ToList();
+
+
+//var res =  students.All(x=>x.Id == 1);
+//var res2 =  students.Any(x=>x.Id == 4545);
+//Console.WriteLine(res);
+//Console.WriteLine(res2);
+//Console.WriteLine(students.Contains(students[0]));
+
+
+//Console.WriteLine(numbers2.Average());
+//Console.WriteLine(students.Average(x=>x.Grade));
+
+//Console.WriteLine(numbers2.Count);
+//Console.WriteLine(numbers2.Count(x => x % 2 == 0));
+
+
+//Console.WriteLine(numbers2.Max(x=>x / 2 ==0));
+//Console.WriteLine(numbers2.Min(x=>x / 2 ==0));
+//Console.WriteLine(numbers2.MaxBy(x => x % 2 == 0));
+
+
+//numbers2.Sum();
+
+//Console.WriteLine("Please enter id");
+//int id = Convert.ToInt32(Console.ReadLine());
+
+//var res = students.FirstOrDefault(x => x.Id == id);
+//if (res is null)
+//    Console.WriteLine("There is no data");
+//else
+//    Console.WriteLine(res.Name);
+
+//var res = numbers2.FirstOrDefault(x=> x == 100);
+//Console.WriteLine(res);
+
+
+//students
+//    .Skip(10)
+//    .OrderBy(x=>x.Name)
+//    .Take(10);
